@@ -1,10 +1,8 @@
 package main
 
 import (
+	"go-envload/utils"
 	"log"
-	"os"
-
-	"github.com/joho/godotenv"
 )
 
 func main() {
@@ -15,11 +13,5 @@ func main() {
 }
 
 func GetEnvMsg() string{
-	e := godotenv.Load()
-	
-	if e != nil {
-		log.Fatal("Error loading .env file (main)")
-	}
-
-	return os.Getenv("MSG")
+	return utils.GetEnvMsg("")
 }
