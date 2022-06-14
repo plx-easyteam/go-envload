@@ -9,12 +9,17 @@ import (
 
 func main() {
 	log.Println(":: Hello go-envload ::")
-	e := godotenv.Load()
 
+
+	log.Println(GetEnvMsg())
+}
+
+func GetEnvMsg() string{
+	e := godotenv.Load()
+	
 	if e != nil {
 		log.Fatal("Error loading .env file (main)")
 	}
 
-	envMsg := os.Getenv("MSG")
-	log.Println(envMsg)
+	return os.Getenv("MSG")
 }
