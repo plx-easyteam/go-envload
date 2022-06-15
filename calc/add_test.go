@@ -7,7 +7,7 @@ import (
 )
 
 func TestAdd(t *testing.T) {
-	expected := ":: Addition ::"
+	expected := "##### Addition #####"
 	actual := WhoAmI()
 
 	assert.Equal(t, expected, actual)

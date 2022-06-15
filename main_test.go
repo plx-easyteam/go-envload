@@ -7,8 +7,8 @@ import (
 )
 
 func TestMain(t *testing.T){ 
-	expected := ":: This is a message found in .env file ::"
-	actual := GetEnvMsg()
+	expected := "##### This is a message found in .env file #####"
+	actual := HelloMsg()
 
 	assert.Equal(t, expected, actual)
 }

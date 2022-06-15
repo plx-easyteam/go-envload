@@ -11,5 +11,5 @@ func Add(a int, b int) int {
 }
 
 func WhoAmI() string {
-	return utils.GetEnvMsg("ADD")
+	return utils.GetEnvValue("CALC_ADD")
 }
