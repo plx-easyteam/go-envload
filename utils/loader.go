@@ -9,27 +9,12 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// func GetEnvMsg(msg string) string {
-// 	// err := godotenv.Load()
-// 	err := godotenv.Load(".env")
-
-// 	if err != nil {
-// 		log.Fatalln("Error loading .env file (loader) ", err)
-// 	}
-
-// 	if msg == "" {
-// 		return os.Getenv("HELLO")
-// 	}
-
-// 	return os.Getenv(msg)
-// }
 const PROJECT_NAME = "go-envload"
 
 func GetEnvValue(key string) string {
 
 	if flag.Lookup("test.v") == nil {
 		// When "go run"
-		// err := godotenv.Load(".env")
 		err := godotenv.Load(".env")
 		if err != nil {
 			log.Fatalln("Error loading .env file (loader) ", err)
